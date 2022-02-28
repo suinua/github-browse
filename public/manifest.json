@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Github Browse",
+  "description": "make it easy to browse github repository",
+  "version": "0.1.0",
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+  "action": {},
+  "content_scripts": [{
+    "matches": ["https://github.com/*"],
+    "js": [
+      "index.js"
+    ]
+  }]
+}
