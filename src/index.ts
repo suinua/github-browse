@@ -5,7 +5,7 @@ let clickedFolderUrls: string[] = [];
 
 
 window.addEventListener("load", async function (e) {
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 1000));
     let items = document.querySelectorAll('.js-navigation-item');
     items.forEach(item => {
         analyze(item);
@@ -56,6 +56,7 @@ function unfold(rowItemElement: Element, anchorElement: HTMLAnchorElement) {
             if (filesElement.getAttribute('aria-labelledby') === 'files') {
                 filesElement.children[1].remove();
                 filesElement.style.marginLeft = '5%';
+                removeSkeleton(filesElement);
                 let container = document.createElement('div');
                 container.id = anchorElement.href;
                 container.appendChild(filesElement);
@@ -67,4 +68,12 @@ function unfold(rowItemElement: Element, anchorElement: HTMLAnchorElement) {
             });
         }
     });
+}
+
+function removeSkeleton(parentElement:Element) {
+    let skeletonElements = parentElement.querySelectorAll('.Skeleton');
+    for (let i = 0; i < skeletonElements.length; i++) {
+        console.log(i);
+        skeletonElements[i].remove();
+    }
 }
