@@ -1,6 +1,8 @@
 # Github-browse
 Githubのフォルダを見やすくします  
 完成したらストアに出します  
+![download](https://raw.githubusercontent.com/suinua/github-browse/master/images/sample.gif)
+
 
 # 導入方法
 2,cloneまたはダウンロードして展開  
