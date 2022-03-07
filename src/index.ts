@@ -5,9 +5,7 @@ let clickedFolderUrls: string[] = [];
 
 
 window.addEventListener("load", async function (e) {
-    console.log("loaded");
     await new Promise(resolve => setTimeout(resolve, 2000));
-    console.log("3sec");
     let items = document.querySelectorAll('.js-navigation-item');
     items.forEach(item => {
         analyze(item);
