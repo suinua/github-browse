@@ -13,6 +13,11 @@
     "matches": ["https://github.com/*"],
     "js": [
       "index.js"
-    ]
-  }]
+    ],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+  "permissions": [
+    "tabs"
+  ]
 }

@@ -25,7 +25,6 @@ export class ContentType {
 
 
     static fromString(value:string): ContentType {
-        console.assert([ContentType.File().value,ContentType.Directory().value].includes(value));
         return new ContentType(value);
     }
 }

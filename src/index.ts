@@ -4,10 +4,15 @@ import axios, {AxiosRequestConfig} from "axios";
 let clickedFolderUrls: string[] = [];
 
 
-let items = document.querySelectorAll('.js-navigation-item');
-items.forEach(item => {
-    analyze(item);
-});
+window.addEventListener("load", async function (e) {
+    console.log("loaded");
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    console.log("3sec");
+    let items = document.querySelectorAll('.js-navigation-item');
+    items.forEach(item => {
+        analyze(item);
+    });
+}, false);
 
 
 function analyze(rowItemElement: Element): void {
