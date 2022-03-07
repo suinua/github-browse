@@ -73,7 +73,6 @@ function unfold(rowItemElement: Element, anchorElement: HTMLAnchorElement) {
 function removeSkeleton(parentElement:Element) {
     let skeletonElements = parentElement.querySelectorAll('.Skeleton');
     for (let i = 0; i < skeletonElements.length; i++) {
-        console.log(i);
         skeletonElements[i].remove();
     }
 }
